@@ -96,7 +96,7 @@ public class Pl3xMapTask extends BukkitRunnable {
 
         marker.markerOptions(options);
 
-        String markerid = "worldguard_" + world.name() + "_region_" + region.getId();
+        String markerid = "worldguard_" + world.name() + "_region_" + region.getId().hashCode();
         this.provider.addMarker(Key.of(markerid), marker);
     }
 
